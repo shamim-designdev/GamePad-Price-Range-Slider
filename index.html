@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Product Price Range Slider</title>
+</head>
+<body>
+
+
+    <div class="sidebar">
+        <h2 class="sidebar-title">Product Filters</h2>
+        <div class="filter-category">
+            <h3 class="filter-heading">Categories</h3>
+            <ul>
+                <li><input type="checkbox" id="category1"> <label for="category1">Electronics</label></li>
+                <li><input type="checkbox" id="category2"> <label for="category2">Gadgets</label></li>
+                <li><input type="checkbox" id="category3"> <label for="category3">Accessories</label></li>
+            </ul>
+        </div>
+        <div class="filter-price">
+            <h3 class="filter-heading">Price Range</h3>
+            <input type="range" id="priceRange" min="0" max="1000" value="500" oninput="updatePriceRange()">
+            <p>Price: $<span id="priceValue">500</span></p>
+        </div>
+        <button class="filter-btn" onclick="filterProducts()">Apply Filters</button>
+    </div>
+    
+    <div class="product-list">
+        <h2 class="product-list-title">GamePad</h2>
+        <div class="product-container">
+            <div class="product-item" data-price="200">
+                <img src="./img/xbox.jpg" alt="Product 1">
+                <div class="product-info">
+                    <p class="product-name">PowerA Wired Controller for Xbox Series X|S - Black</p>
+                    <p class="product-price">$ 200</p>
+                </div>
+            </div>
+            <div class="product-item" data-price="400">
+                <img src="./img/xbox2.jpg" alt="Product 2">
+                <div class="product-info">
+                    <p class="product-name">PowerA Wired Controller for Xbox Series X|S - Blue</p>
+                    <p class="product-price">$400</p>
+                </div>
+            </div>
+            <div class="product-item" data-price="600">
+                <img src="./img/xbox3.jpg" alt="Product 3">
+                <div class="product-info">
+                    <p class="product-name">PowerA Wired Controller for Xbox Series X|S - White</p>
+                    <p class="product-price">$600</p>
+                </div>
+            </div>
+            <div class="product-item" data-price="900">
+                <img src="./img/xbox4.jpg" alt="Product 4">
+                <div class="product-info">
+                    <p class="product-name">PowerA Wired Controller for Xbox Series X|S - Red</p>
+                    <p class="product-price">$900</p>
+                </div>
+            </div>
+        </div>
+    </div>
+       
+    
+
+
+    <script src="./js/app.js"></script>
+    
+</body>
+</html>
